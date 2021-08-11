@@ -1,4 +1,4 @@
-# docstr-coverage
+# docstr-coverage-action
 Github Action for running the docstr-coverage python package
 
 ## Configuration
