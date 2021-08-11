@@ -1,0 +1,68 @@
+name: 'docstr-coverage'
+description: 'Run the docstr-coverage python package'
+
+inputs:
+  source_dir:
+    description: 'Path to source root in repo'
+    required: true
+
+  fail_under:
+    description: 'Fail if under a certain percentage of coverage (default: 100.0)'
+    default: 100
+
+  skip_magic:
+    description: 'Ignore all magic methods (except __init__)'
+    default: true
+
+  skip_init:
+    description: 'Ignore all __init__ methods'
+    default: true
+
+  skip_file_doc:
+    description: 'Ignore module docstrings (at the top of files)'
+    default: true
+
+  skip_private:
+    description: 'Ignore private functions (starting with a single underscore)'
+    default: true
+
+  skip_class_def:
+    description: 'Ignore docstrings of class definitions'
+    default: true
+
+  accept_empty:
+    description: 'Exit with code 0 if no Python files are found (default: exit code 1)'
+    default: false
+
+  exclude:
+    description: 'Filepath pattern to exclude from analysis'
+    default: ''
+
+  verbose:
+    description: 'Set verbosity level (0-3, default: 3)'
+    default: 3
+
+  badge:
+    description: 'Generate a docstring coverage percent badge as an SVG saved to a given filepath'
+    default: false
+
+  follow_links:
+    description: 'Follow symlinks'
+    default: false
+
+  percentage_only:
+    description: 'Output only the overall coverage percentage as a float, silencing all other logging'
+    default: false
+
+outputs:
+  output:
+    description: Contains the docstr coverage percentage of the provided source dir
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.source_dir }}
+branding:
+  icon: 'book-open'  
+  color: 'white'
