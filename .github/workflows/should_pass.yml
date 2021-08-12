@@ -10,6 +10,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: docstr-coverage should pass
-        uses: skazazes-work/docstr-coverage@v1
+        uses: skazazes-work/docstr-coverage-action@v1
         with:
           source_dir: src/test_module
