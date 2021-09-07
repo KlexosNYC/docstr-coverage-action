@@ -14,6 +14,8 @@ if [ $INPUT_PERCENTAGE_ONLY ]; then command+="--percentage-only "; fi;
 if [ -n "$INPUT_DOCSTR_IGNORE_FILE" ]; then command+="--docstr-ignore-file $INPUT_DOCSTR_IGNORE_FILE"; fi;
 if [ -n "$INPUT_EXCLUDE" ]; then command+="--exclude $INPUT_EXCLUDE "; fi;
 
-echo "$command $GITHUB_WORKSPACE/$INPUT_SOURCE_DIR"
+if [ -n "$GITHUB_WORKSPACE" ]; then command+="$GITHUB_WORKSPACE/"; fi;
+
+$command $INPUT_SOURCE_DIR
 
 # docstr-coverage --fail-under $INPUT_FAIL_UNDER  $GITHUB_WORKSPACE/$INPUT_SOURCE_DIR
