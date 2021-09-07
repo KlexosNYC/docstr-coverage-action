@@ -1,4 +1,4 @@
-# docstr-coverage
+# docstr-coverage-action
 Github Action for running the docstr-coverage python package
 
 ## Configuration
@@ -66,7 +66,7 @@ jobs:
     name: Run docstr-coverage example
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
 
       - name: docstr-coverage should fail
         uses: skazazes-work/docstr-coverage@v1
