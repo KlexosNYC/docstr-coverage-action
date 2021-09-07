@@ -1,5 +1,7 @@
 name: Example below coverage threshold
-on: [push]
+on: 
+  workflow_dispatch: 
+  push:
 
 jobs:
   docstr-coverage:

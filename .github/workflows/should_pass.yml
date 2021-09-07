@@ -1,6 +1,7 @@
 name: Example above coverage threshold
-on: [push]
-
+on: 
+  workflow_dispatch: 
+  push:
 jobs:
   docstr-coverage:
     runs-on: ubuntu-latest
