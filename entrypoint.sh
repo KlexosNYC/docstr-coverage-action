@@ -13,7 +13,7 @@ if [ $INPUT_FOLLOW_LINKS ]; then command+="--follow-links "; fi;
 if [ $INPUT_PERCENTAGE_ONLY ]; then command+="--percentage-only "; fi;
 if [ -n "$INPUT_DOCSTR_IGNORE_FILE" ]; then command+="--docstr-ignore-file $INPUT_DOCSTR_IGNORE_FILE "; fi;
 if [ -n "$INPUT_EXCLUDE" ]; then command+="--exclude $INPUT_EXCLUDE "; fi;
-if [ -n "$INPUT_FAIL_UNDER" ]; then command+="--fail-under $INPUT_FAIL_UNDER "; fi;
+if [ $INPUT_FAIL_UNDER ]; then command+="--fail-under $INPUT_FAIL_UNDER "; fi;
 
 if [ -n "$GITHUB_WORKSPACE" ]; then command+="$GITHUB_WORKSPACE/"; fi;
 command+="$INPUT_SOURCE_DIR"
