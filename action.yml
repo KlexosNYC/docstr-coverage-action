@@ -34,6 +34,10 @@ inputs:
     description: 'Exit with code 0 if no Python files are found (default: exit code 1)'
     default: false
 
+  docstr_ignore_file:
+    description: 'Filepath containing list of patterns to ignore. Patterns are (file-pattern, name-pattern) pairs'
+    default: ''
+
   exclude:
     description: 'Filepath pattern to exclude from analysis'
     default: ''

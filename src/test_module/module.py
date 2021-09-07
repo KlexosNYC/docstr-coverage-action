@@ -17,3 +17,7 @@ class TestClassWithDocstr:
     def test_public(self):
         '''This is a method docstring'''
         pass
+
+class IgnoreClass:
+    def test(self):
+        pass

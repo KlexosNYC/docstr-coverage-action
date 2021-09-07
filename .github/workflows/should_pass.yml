@@ -13,3 +13,4 @@ jobs:
         uses: skazazes-work/docstr-coverage@v1
         with:
           source_dir: src/test_module
+          docstr_ignore_file: .docstr-ignore-file
