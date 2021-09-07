@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-command="docstr-coverage --verbose $INPUT_VERBOSE --fail-under $INPUT_FAIL_UNDER"
+command="docstr-coverage --verbose $INPUT_VERBOSE --fail-under $INPUT_FAIL_UNDER "
 
 if [ $INPUT_SKIP_MAGIC ]; then command+="--skip-magic "; fi;
 if [ $INPUT_SKIP_INIT ]; then command+="--skip-init "; fi;
