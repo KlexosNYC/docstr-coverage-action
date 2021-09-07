@@ -11,7 +11,7 @@ if [ $INPUT_ACCEPT_EMPTY ]; then command+="--accept-empty "; fi;
 if [ $INPUT_BADGE ]; then command+="--badge $INPUT_BADGE "; fi;
 if [ $INPUT_FOLLOW_LINKS ]; then command+="--follow-links "; fi;
 if [ $INPUT_PERCENTAGE_ONLY ]; then command+="--percentage-only "; fi;
-if [ $INPUT_DOCSTR_IGNORE_FILE !="" ]; then command+="--docstr-ignore-file $INPUT_DOCSTR_IGNORE_FILE"; fi;
+if [ $INPUT_DOCSTR_IGNORE_FILE != "" ]; then command+="--docstr-ignore-file $INPUT_DOCSTR_IGNORE_FILE"; fi;
 if [ $INPUT_EXCLUDE != "" ]; then command+="--exclude $INPUT_EXCLUDE "; fi;
 
 echo "$command $GITHUB_WORKSPACE/$INPUT_SOURCE_DIR"
