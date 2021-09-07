@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: docstr-coverage should fail
-        uses: skazazes-work/docstr-coverage-action@v1.3
+        uses: skazazes-work/docstr-coverage-action@v1.4
         with:
           source_dir: src
           docstr_ignore_file: .docstr-ignore-file
