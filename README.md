@@ -5,9 +5,9 @@ Github Action for running the docstr-coverage python package
 ### Available options for use in action 'with'
 - source_dir 
   - Directory containing python code
-  - **Required** (str) Example: /src
+  - **Required** (str) Example: `source_dir: src`
             
-- failure_percentage 
+- fail_under 
   - Coverage percentage required to be considered passing
   - **Optional** (int) Defaults to 100
   
@@ -45,7 +45,7 @@ Github Action for running the docstr-coverage python package
 
 - badge:
   - Generate a docstring coverage percent badge as an SVG saved to a given filepath
-  - **Optional** (bool) Defaults to false
+  - **Optional** (filepath) Disabled if not set. (Example: `badge: docs/docstr-badge.svg`)
 
 - follow_links:
   - Follow symlinks
@@ -69,7 +69,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: docstr-coverage should fail
-        uses: skazazes-work/docstr-coverage@v1
+        uses: KlexosNYC/docstr-coverage-action@v1.4
         with:
-          source_dir: /src
+          source_dir: src
 ```
